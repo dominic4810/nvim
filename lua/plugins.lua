@@ -39,6 +39,23 @@ local plugins = {
     "williamboman/mason-lspconfig.nvim",
     lazy = true 
   },
+  -- LSP for rust analyzer
+  {
+    "simrat39/rust-tools.nvim",
+    lazy = false,
+    config = function(_, _)
+      local rt = require("rust-tools")
+      rt.setup{
+        on_attach = function(_, bufnr)
+          -- Hover actions
+          vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+          -- Code action groups
+          vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+        end,
+      }
+    end,
+  },
+
   -- formatter and linters
   {
     "nvimdev/guard.nvim",
@@ -235,6 +252,40 @@ local plugins = {
     end,
     config = function(_, opts)
       require("lualine").setup(opts)
+    end,
+  },
+  -- illuminate: highlight word under cursor
+  {
+    "RRethy/vim-illuminate",
+    lazy = false,
+    config = function()
+      vim.g.Illuminate_delay = 0
+    end,
+  },
+  -- trouble: show diagnostics in a list
+  {
+    "folke/trouble.nvim",
+    lazy = false,
+    opts = function()
+      return require "configs.trouble"
+    end,
+  },
+  -- whichkey
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    opts = {},
+  },
+  -- terminal with floatterm
+  {
+    "voldikss/vim-floaterm",
+    lazy = false,
+    config = function()
+      require "configs.floaterm"
     end,
   },
 }

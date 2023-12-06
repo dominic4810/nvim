@@ -12,6 +12,7 @@ local options = {
     "json",
     "yaml",
     "dockerfile",
+    "toml",
   },
 
   highlight = {

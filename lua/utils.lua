@@ -12,7 +12,7 @@ M.set_mappings = function(mappings)
       local binding_opts = opts
       binding = binding_and_desc[1]
       binding_opts.desc = binding_and_desc[2]
-      vim.keymap.set(mode, key, binding, binding_opts) 
+      vim.keymap.set(mode, key, binding, binding_opts)
     end
   end
 end
