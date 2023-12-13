@@ -16,6 +16,10 @@ local mappings = {
 
     -- marks switcher
     ["<leader>ma"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
+
+    -- lsp
+    ["<leader>fr"] = { "<cmd> Telescope lsp_references <CR>", "Find in LSP references" },
+    ["<leader>fd"] = { "<cmd> Telescope lsp_definitions <CR>", "Find in LSP definitons" },
   },
 }
 
