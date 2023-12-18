@@ -22,6 +22,7 @@ opt.undofile = true
 opt.scrolloff = 20
 opt.colorcolumn = "80,120"
 opt.showmode = false
+opt.scrolloff = 15
 
 -- Searching
 opt.incsearch = true            -- search as characters are entered
