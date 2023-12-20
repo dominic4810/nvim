@@ -53,10 +53,6 @@ mappings.n = {
     "Hop by pattern, forwards"},
   -- symbols
   ["<leader>s"] = {"<cmd>SymbolsOutline<cr>", "Symbols Outline"},
-  -- TODO:
-  --  - LSP formatting
-  --  - tabufline
-  --  - statusline
 }
 
 -----------------
