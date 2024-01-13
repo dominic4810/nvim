@@ -10,3 +10,10 @@ mappings.n = {
 }
 
 require("utils").set_mappings(mappings)
+
+local options = {
+  icons = {
+  }
+}
+
+return options

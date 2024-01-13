@@ -235,14 +235,6 @@ local plugins = {
       require("symbols-outline").setup()
     end,
   },
-  -- marks
-  {
-    "chentoast/marks.nvim",
-    lazy = false,
-    config = function()
-      require("marks").setup()
-    end,
-  },
   -- statusline
   {
     "nvim-lualine/lualine.nvim",
@@ -302,6 +294,22 @@ local plugins = {
       -- configurations go here
     },
   },
+  -- scroll bar
+  {
+    "petertriho/nvim-scrollbar",
+    lazy = false,
+    dependencies = {
+      "kevinhwang91/nvim-hlslens",
+    },
+    config = function()
+      require("scrollbar").setup(
+        require "configs.scrollbar"
+      )
+      require("scrollbar.handlers.search").setup({})
+      require("scrollbar.handlers.gitsigns").setup()
+    end,
+  },
+
 }
 
 local opts = {
