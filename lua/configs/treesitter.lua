@@ -14,6 +14,7 @@ local options = {
     "yaml",
     "dockerfile",
     "toml",
+    "xml",
   },
 
   highlight = {
