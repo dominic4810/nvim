@@ -18,7 +18,7 @@ local plugins = {
   -- colorscheme
   {
     "morhetz/gruvbox",
-    layz = false,
+    lazy = false,
     config = function(_, _)
       require "configs.gruvbox"
     end
