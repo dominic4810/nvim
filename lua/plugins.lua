@@ -63,7 +63,7 @@ local plugins = {
     dependencies = {
         "nvimdev/guard-collection",
     },
-    opts = function()
+    config = function()
       require "configs.guard"
     end,
   },
