@@ -309,7 +309,11 @@ local plugins = {
       require("scrollbar.handlers.gitsigns").setup()
     end,
   },
-
+  -- sticky scroll
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    lazy = false,
+  }
 }
 
 local opts = {
