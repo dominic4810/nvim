@@ -318,6 +318,7 @@ local plugins = {
   {
     "stevearc/dressing.nvim",
     opts = {},
+    lazy = false,
   },
 }
 
