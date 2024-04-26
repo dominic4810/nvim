@@ -313,7 +313,12 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter-context",
     lazy = false,
-  }
+  },
+  -- Dressing for pretty UI
+  {
+    "stevearc/dressing.nvim",
+    opts = {},
+  },
 }
 
 local opts = {
