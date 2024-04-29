@@ -20,6 +20,7 @@ local mappings = {
     -- lsp
     ["<leader>fr"] = { "<cmd> Telescope lsp_references <CR>", "Find in LSP references" },
     ["<leader>fd"] = { "<cmd> Telescope lsp_definitions <CR>", "Find in LSP definitons" },
+    ["<leader>fs"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find in LSP symbols" },
   },
 }
 
