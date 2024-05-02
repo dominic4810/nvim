@@ -23,6 +23,15 @@ local plugins = {
       require "configs.gruvbox"
     end
   },
+  {
+    "catppuccin/nvim",
+    lazy = false,
+    name = "catpuccin",
+  },
+  {
+    "olimorris/onedark.nvim",
+    lazy = false,
+  },
   -- LSP stuff
   {
     "neovim/nvim-lspconfig",
@@ -320,6 +329,11 @@ local plugins = {
     opts = {},
     lazy = false,
   },
+  -- Colorizer
+  {
+    "norcalli/nvim-colorizer.lua",
+    lazy = false,
+  }
 }
 
 local opts = {
