@@ -12,7 +12,7 @@ local mappings = {
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
-    ["<leader>gt"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+    ["<leader>fg"] = { "<cmd> Telescope git_status <CR>", "Git status" },
 
     -- marks switcher
     ["<leader>ma"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
