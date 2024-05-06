@@ -333,6 +333,16 @@ local plugins = {
   {
     "norcalli/nvim-colorizer.lua",
     lazy = false,
+  },
+  -- yanky
+  {
+    "gbprod/yanky.nvim",
+    lazy = false,
+    opts = {},
+  },
+  {
+    "chrisgrieser/cmp_yanky",
+    lazy = false,
   }
 }
 

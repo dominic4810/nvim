@@ -20,7 +20,10 @@ local mappings = {
     -- lsp
     ["<leader>fr"] = { "<cmd> Telescope lsp_references <CR>", "Find in LSP references" },
     ["<leader>fd"] = { "<cmd> Telescope lsp_definitions <CR>", "Find in LSP definitons" },
-    ["<leader>fs"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find in LSP symbols" },
+    ["<leader>fs"] = { "<cmd> Telescope lsp_document_symbols symbol_width=75 <CR>", "Find in LSP symbols" },
+
+    -- yanky
+    ["<leader>fy"] = { "<cmd>Telescope yank_history<CR>", "Yank history" },
   },
 }
 
@@ -79,7 +82,10 @@ local options = {
     },
   },
 
-  extensions_list = { "fzf" },
+  extensions_list = {
+    "fzf",
+    "yank_history",
+  },
   extensions = {
     fzf = {
       fuzzy = true,
