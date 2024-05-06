@@ -114,6 +114,7 @@ local plugins = {
         "hrsh7th/cmp-buffer",       -- buffer auto-completion
         "hrsh7th/cmp-path",         -- path auto-completion
         "hrsh7th/cmp-cmdline",      -- cmdline auto-completion
+        "chrisgrieser/cmp_yanky",
       },
     },
     config = function(_, _)
@@ -340,10 +341,6 @@ local plugins = {
     lazy = false,
     opts = {},
   },
-  {
-    "chrisgrieser/cmp_yanky",
-    lazy = false,
-  }
 }
 
 local opts = {

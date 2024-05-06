@@ -34,13 +34,11 @@ cmp.setup({
           select = false,
         },
         ["<CR>"] = {},
-        
         -- Use Esc to close cmp
         ["<S-Esc>"] = cmp.mapping({
             i = cmp.mapping.abort(),
             c = cmp.mapping.close(),
         }),
-
         -- A super tab
         -- sourc: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
         ["<Tab>"] = cmp.mapping(function(fallback)
@@ -81,6 +79,7 @@ cmp.setup({
               luasnip = '[Luasnip]',
               buffer = '[File]',
               path = '[Path]',
+              cmp_yanky = '[Yank]',
           })[entry.source.name]
           return vim_item
       end,
