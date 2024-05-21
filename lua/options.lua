@@ -2,7 +2,7 @@ local opt = vim.opt
 -- Hint: use `:h <option>` to figure out the meaning if needed
 opt.clipboard = 'unnamedplus'   -- use system clipboard 
 opt.completeopt = {'menu', 'menuone', 'noselect'}
-opt.mouse = "a"
+opt.mouse = "i"
 
 -- Tab
 opt.tabstop = 2                 -- number of visual spaces per TAB
