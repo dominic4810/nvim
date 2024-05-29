@@ -10,6 +10,9 @@ local mappings = {
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
     ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
 
+    -- quickfix
+    ["<C-q>"] = require('telescope.actions').send_to_qflist + require('telescope.actions').open_qflist,
+
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
     ["<leader>fg"] = { "<cmd> Telescope git_status <CR>", "Git status" },
@@ -24,6 +27,9 @@ local mappings = {
 
     -- yanky
     ["<leader>fy"] = { "<cmd>Telescope yank_history<CR>", "Yank history" },
+  },
+  i = {
+    ["<C-q>"] = require('telescope.actions').send_to_qflist + require('telescope.actions').open_qflist,
   },
 }
 

@@ -53,6 +53,8 @@ mappings.n = {
     "Hop by pattern, forwards"},
   -- symbols
   ["<leader>s"] = {"<cmd>SymbolsOutline<cr>", "Symbols Outline"},
+  -- exit with C-d
+  ["<C-d>"] = {":q<CR>", "Exit"},
 }
 
 -----------------
