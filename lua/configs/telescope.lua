@@ -48,6 +48,8 @@ local options = {
       "--line-number",
       "--column",
       "--smart-case",
+      '--hidden',   -- this will search hidden files as well
+      '--glob', '!.git/' -- exclude .git directory
     },
     prompt_prefix = "   ",
     selection_caret = "  ",
@@ -85,6 +87,29 @@ local options = {
     buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
     mappings = {
       n = { ["q"] = require("telescope.actions").close },
+    },
+  },
+  pickers = {
+    find_files = {
+      hidden = true,
+      file_ignore_patterns = { ".git/" },
+    },
+    live_grep = {
+      hidden = true,
+      file_ignore_patterns = { ".git/" },
+    },
+    buffers = {
+      sort_lastused = true,
+      theme = "dropdown",
+      previewer = false,
+      mappings = {
+        i = {
+          ["<c-d>"] = "delete_buffer",
+        },
+        n = {
+          ["<c-d>"] = "delete_buffer",
+        },
+      },
     },
   },
 
