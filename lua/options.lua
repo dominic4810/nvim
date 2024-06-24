@@ -20,7 +20,7 @@ opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
 opt.signcolumn = "yes"
 opt.undofile = true
 opt.scrolloff = 20
-opt.colorcolumn = "80,120"
+-- opt.colorcolumn = "80,120"
 opt.showmode = false
 opt.scrolloff = 15
 

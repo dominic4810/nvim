@@ -27,6 +27,9 @@ local mappings = {
 
     -- yanky
     ["<leader>fy"] = { "<cmd>Telescope yank_history<CR>", "Yank history" },
+
+    -- colorscheme
+    ["<leader>fc"] = { "<cmd>Telescope colorscheme<CR>", "Colorscheme" },
   },
   i = {
     ["<C-q>"] = require('telescope.actions').send_to_qflist + require('telescope.actions').open_qflist,
