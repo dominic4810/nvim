@@ -35,16 +35,8 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
 end
 
--- reset tab stop, width etc for python
-local jedi_on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-    vim.opt.tabstop = 2                 -- number of visual spaces per TAB
-    vim.opt.softtabstop = 2             -- number of spacesin tab when editing
-    vim.opt.shiftwidth = 2              -- insert 4 spaces on a tab
-end
-
-lspconfig["jedi_language_server"].setup({
-    on_attach = jedi_on_attach,
+lspconfig["ruff_lsp"].setup({
+    on_attach = on_attach,
 })
 lspconfig["lua_ls"].setup({
     on_attach = on_attach,

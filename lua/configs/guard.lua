@@ -9,13 +9,13 @@ require("utils").set_mappings(mappings)
 local ft = require('guard.filetype')
 
 -- Assuming you have guard-collection
-ft('python'):fmt({
-  cmd = 'yapf',
-  fname = false,
-  stdin = true,
-})
-            :append('isort')
-            :lint('pylint')
+-- ft('python'):fmt({
+--   cmd = 'yapf',
+--   fname = false,
+--   stdin = true,
+-- })
+--             :append('isort')
+--             :lint('pylint')
 
 -- Call setup() LAST!
 require('guard').setup({

@@ -25,11 +25,11 @@ require("mason").setup(options)
 
 require("mason-lspconfig").setup({
   ensure_installed = {
-    "jedi_language_server",
     "lua_ls",
     "bashls",
     "clangd",
     "cmake",
     "rust_analyzer",
+    "ruff_lsp"
   }
 })
