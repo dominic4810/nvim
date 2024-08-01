@@ -142,7 +142,8 @@ local plugins = {
     "lewis6991/gitsigns.nvim",
     lazy = false,
     config = function(_, _)
-      require("gitsigns").setup{on_attach = require("configs.gitsigns").on_attach}
+      local config = require("configs.gitsigns")
+      require("gitsigns").setup(config)
     end,
   },
   -- indentaion guides

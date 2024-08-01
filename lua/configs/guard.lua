@@ -17,6 +17,12 @@ ft('python'):fmt({
             :append('isort')
             :lint('pylint')
 
+ft('json'):fmt({
+  cmd = 'jq',
+  fname = false,
+  stdin = true,
+})
+
 -- Call setup() LAST!
 require('guard').setup({
     -- the only options for the setup function
