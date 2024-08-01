@@ -39,5 +39,6 @@ M.on_attach = function (bufnr)
     map('n', '<leader>gtd', gs.toggle_deleted)
 end
 
+M.signs_staged_enable = false
 
 return M
