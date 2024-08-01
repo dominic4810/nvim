@@ -214,13 +214,13 @@ local plugins = {
     end,
   },
   -- Github Copilot
-  {
-    "github/copilot.vim",
-    lazy = false,
-    config = function ()
-      require "configs.copilot"
-    end
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  --   config = function ()
+  --     require "configs.copilot"
+  --   end
+  -- },
   -- vim surround
   {
     "kylechui/nvim-surround",
