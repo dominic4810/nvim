@@ -21,12 +21,12 @@ cmp.setup({
         ["<C-j>"] = cmp.mapping(
           function(fallback)
             cmp.mapping.abort()
-            local copilot_keys = vim.fn["copilot#Accept"]()
-            if copilot_keys ~= "" then
-              vim.api.nvim_feedkeys(copilot_keys, "i", true)
-            else
-              fallback()
-            end
+            -- local copilot_keys = vim.fn["copilot#Accept"]()
+            -- if copilot_keys ~= "" then
+            --   vim.api.nvim_feedkeys(copilot_keys, "i", true)
+            -- else
+            fallback()
+            -- end
           end
         ),
         ["<C-Cr>"] = cmp.mapping.confirm {
@@ -43,7 +43,7 @@ cmp.setup({
         -- sourc: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
         ["<Tab>"] = cmp.mapping(function(fallback)
             -- Hint: if the completion menu is visible select next one
-            local copilot_keys = vim.fn["copilot#Accept"]()  -- catches copilot to disable accept with tab
+            -- local copilot_keys = vim.fn["copilot#Accept"]()  -- catches copilot to disable accept with tab
             if cmp.visible() then
                 cmp.select_next_item()
             elseif has_words_before() then
