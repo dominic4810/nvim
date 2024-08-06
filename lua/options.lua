@@ -1,6 +1,6 @@
 local opt = vim.opt
 -- Hint: use `:h <option>` to figure out the meaning if needed
-opt.clipboard = 'unnamedplus'   -- use system clipboard 
+opt.clipboard = 'unnamedplus'   -- use system clipboard
 opt.completeopt = {'menu', 'menuone', 'noselect'}
 opt.mouse = "i"
 
@@ -23,6 +23,10 @@ opt.scrolloff = 20
 -- opt.colorcolumn = "80,120"
 opt.showmode = false
 opt.scrolloff = 15
+
+-- Highlight:
+vim.cmd(':highlight ExtraWhitespace ctermbg=red guibg=red')  -- highlight trailing whitespace
+vim.cmd(':match ExtraWhitespace /\\s\\+$/')
 
 -- Searching
 opt.incsearch = true            -- search as characters are entered
