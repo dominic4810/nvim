@@ -50,7 +50,7 @@ local plugins = {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    lazy = true 
+    lazy = true
   },
   -- LSP for rust analyzer
   {
@@ -149,6 +149,13 @@ local plugins = {
       local config = require("configs.gitsigns")
       require("gitsigns").setup(config)
     end,
+  },
+  {
+    "sindrets/diffview.nvim",
+    lazy = false,
+    opts = function()
+      return require "configs.diffview"
+    end
   },
   -- indentaion guides
   {
