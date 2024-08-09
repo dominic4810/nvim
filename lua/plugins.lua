@@ -32,6 +32,10 @@ local plugins = {
     "olimorris/onedark.nvim",
     lazy = false,
   },
+  {
+    "Mofiqul/dracula.nvim",
+    lazy=false
+  },
   -- LSP stuff
   {
     "neovim/nvim-lspconfig",
