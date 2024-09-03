@@ -119,6 +119,7 @@ local options = {
   extensions_list = {
     "fzf",
     "yank_history",
+    "file_browser",
   },
   extensions = {
     fzf = {

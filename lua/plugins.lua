@@ -215,6 +215,13 @@ local plugins = {
       end
     end,
   },
+  {
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require "configs.telescope_file_browser"
+    end,
+  },
   -- Tabline
   {
     "romgrk/barbar.nvim",

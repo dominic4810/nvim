@@ -44,7 +44,23 @@ local jedi_on_attach = function(client, bufnr)
 end
 
 lspconfig["jedi_language_server"].setup({
-    on_attach = jedi_on_attach,
+  on_attach = jedi_on_attach,
+  -- settings = {
+  --   python = {
+  --     analysis = {
+  --       extraPaths = {
+  --         "./argos_experiments_ros2"
+  --       }
+  --     }
+  --   }
+  -- }
+  init_options = {
+    workspace = {
+      extraPaths = {
+        "argos_experiments_ros2"
+      }
+    }
+  },
 })
 lspconfig["lua_ls"].setup({
     on_attach = on_attach,
