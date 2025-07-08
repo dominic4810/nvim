@@ -50,7 +50,7 @@ local plugins = {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    lazy = true
+    lazy = false
   },
   -- LSP for rust analyzer
   {
@@ -232,13 +232,25 @@ local plugins = {
     end,
   },
   -- Github Copilot
-  -- {
-  --   "github/copilot.vim",
-  --   lazy = false,
-  --   config = function ()
-  --     require "configs.copilot"
-  --   end
-  -- },
+  {
+    "github/copilot.vim",
+    lazy = false,
+    config = function ()
+      require "configs.copilot"
+    end
+  },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+    },
+    build = "make tiktoken", -- Only on MacOS or Linux
+    lazy = false,
+    opts = function()
+      require "configs.copilotchat"
+    end,
+  },
   -- vim surround
   {
     "kylechui/nvim-surround",

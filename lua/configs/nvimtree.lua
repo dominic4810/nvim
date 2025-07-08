@@ -3,8 +3,6 @@ mappings = {
   n = {
     -- toggle
     ["<C-b>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
-    -- toggle
-    ["<C-v>"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
   },
 }
 
