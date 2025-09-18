@@ -8,6 +8,7 @@ local mappings = {}
 -----------------
 
 mappings.n = {
+  ["qq"] = { "<Esc>", "Escape" },
   ["<Esc>"] = { ":noh <CR>", "Clear highlights" },
   -- switch between windows
   ["<C-h>"] = { "<C-w>h", "Window left" },
@@ -62,6 +63,7 @@ mappings.n = {
 -----------------
 
 mappings.v = {
+  ["qq"] = { "<Esc>", "Escape" },
   -- indent line
   ["<"] = { "<gv", "Indent line" },
   [">"] = { ">gv", "Indent line" },
@@ -86,6 +88,10 @@ mappings.v = {
       require('hop').hint_patterns({require('hop.hint').HintDirection.AFTER_CUROSR, current_line_only = false})
     end,
     "Hop by pattern, forwards"},
+}
+
+mappings.i = {
+  ["qq"] = { "<Esc>", "Escape" },
 }
 
 require("utils").set_mappings(mappings)
