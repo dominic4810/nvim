@@ -47,6 +47,9 @@ local plugins = {
     opts = function()
       require "configs.mason"
     end,
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+    },
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -69,17 +72,6 @@ local plugins = {
     end,
   },
 
-  -- formatter and linters
-  {
-    "nvimdev/guard.nvim",
-    lazy = false,
-    dependencies = {
-        "nvimdev/guard-collection",
-    },
-    config = function()
-      require "configs.guard"
-    end,
-  },
   -- Autocomplete
   {
     "hrsh7th/nvim-cmp",

@@ -45,23 +45,8 @@ end
 
 lspconfig["jedi_language_server"].setup({
   on_attach = jedi_on_attach,
-  -- settings = {
-  --   python = {
-  --     analysis = {
-  --       extraPaths = {
-  --         "./argos_experiments_ros2"
-  --       }
-  --     }
-  --   }
-  -- }
-  init_options = {
-    workspace = {
-      extraPaths = {
-        "argos_experiments_ros2"
-      }
-    }
-  },
 })
+lspconfig["ruff"].setup({})
 lspconfig["lua_ls"].setup({
     on_attach = on_attach,
 })
@@ -81,3 +66,16 @@ lspconfig["clangd"].setup({
 lspconfig["cmake"].setup({
   on_attach = on_attach,
 })
+
+local mappings = {
+  n = {
+    -- find
+    ["<leader>fm"] = {
+      function()
+        vim.lsp.buf.format()
+      end,
+      "Format"
+    },
+  }
+}
+require("utils").set_mappings(mappings)
