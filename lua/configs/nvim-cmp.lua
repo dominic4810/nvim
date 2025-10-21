@@ -4,14 +4,13 @@ local has_words_before = function()
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-local luasnip = require("luasnip")
 local cmp = require("cmp")
 
 cmp.setup({
     snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
-            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+          vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
         end,
     },
     mapping = cmp.mapping.preset.insert({
@@ -55,8 +54,6 @@ cmp.setup({
         ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
-            elseif luasnip.jumpable( -1) then
-                luasnip.jump( -1)
             else
                 fallback()
             end
@@ -89,7 +86,7 @@ cmp.setup({
   sources = cmp.config.sources({
       { name = 'nvim_lua' },    -- For nvim-lua: neovim Lua api
       { name = 'nvim_lsp' },    -- For nvim-lsp
-      { name = 'luasnip' },     -- For luasnip user
+      { name = 'vsnip' },       -- For vsnip user
       { name = 'buffer' },      -- For buffer word completion
       { name = 'path' },        -- For path completion
       { name = 'cmp_yanky' },   -- For yank

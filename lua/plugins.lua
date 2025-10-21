@@ -51,50 +51,12 @@ local plugins = {
       "williamboman/mason-lspconfig.nvim",
     },
   },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    lazy = false
-  },
-  -- LSP for rust analyzer
-  {
-    "simrat39/rust-tools.nvim",
-    lazy = false,
-    config = function(_, _)
-      local rt = require("rust-tools")
-      rt.setup{
-        on_attach = function(_, bufnr)
-          -- Hover actions
-          vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-          -- Code action groups
-          vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-        end,
-      }
-    end,
-  },
-  {
-    "nvimtools/none-ls.nvim",
-    dependencies = { "williamboman/mason.nvim" },
-    lazy = false,
-    config = function()
-      require("configs.null_ls")
-    end,
-  },
-
   -- Autocomplete
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     lazy = true,
     dependencies = {
-      -- snippets
-      {
-        -- snippet plugin
-        "L3MON4D3/LuaSnip",
-        dependencies = "rafamadriz/friendly-snippets",
-        config = function(_, _)
-          require("configs.luasnip")
-        end,
-      },
       -- autopairing of (){}[] etc
       {
         "windwp/nvim-autopairs",
@@ -112,7 +74,7 @@ local plugins = {
       },
       -- cmp sources plugins
       {
-        "saadparwaiz1/cmp_luasnip",
+        "hrsh7th/vim-vsnip",
         "hrsh7th/cmp-nvim-lua",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",       -- buffer auto-completion
@@ -231,26 +193,6 @@ local plugins = {
       return require "configs.barbar"
     end,
   },
-  -- Github Copilot
-  -- {
-  --   "github/copilot.vim",
-  --   lazy = false,
-  --   config = function ()
-  --     require "configs.copilot"
-  --   end
-  -- },
-  -- {
-  --   "CopilotC-Nvim/CopilotChat.nvim",
-  --   dependencies = {
-  --     { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
-  --     { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-  --   },
-  --   build = "make tiktoken", -- Only on MacOS or Linux
-  --   lazy = false,
-  --   opts = function()
-  --     require "configs.copilotchat"
-  --   end,
-  -- },
   -- vim surround
   {
     "kylechui/nvim-surround",
@@ -266,14 +208,6 @@ local plugins = {
     lazy = true,
     config = function()
       require("hop").setup()
-    end,
-  },
-  -- symbols
-  {
-    "simrat39/symbols-outline.nvim",
-    lazy = false,
-    config = function()
-      require("symbols-outline").setup()
     end,
   },
   -- statusline

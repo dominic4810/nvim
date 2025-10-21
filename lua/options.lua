@@ -10,6 +10,7 @@ opt.softtabstop = 2             -- number of spacesin tab when editing
 opt.shiftwidth = 2              -- insert 4 spaces on a tab
 opt.expandtab = true            -- tabs are spaces, mainly because of python
 opt.smartindent = true
+vim.g.python_recommended_style = 0
 
 -- UI config
 opt.number = true               -- show absolute number

@@ -52,8 +52,6 @@ mappings.n = {
       require('hop').hint_patterns({require('hop.hint').HintDirection.AFTER_CUROSR, current_line_only = false})
     end,
     "Hop by pattern, forwards"},
-  -- symbols
-  ["<leader>s"] = {"<cmd>SymbolsOutline<cr>", "Symbols Outline"},
   -- exit with C-d
   ["<C-d>"] = {":q<CR>", "Exit"},
 }
