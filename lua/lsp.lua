@@ -10,6 +10,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 vim.keymap.set('n', '<leader>dd', vim.diagnostic.disable, opts)
 vim.keymap.set('n', '<leader>dD', vim.diagnostic.enable, opts)
+vim.keymap.set('n', '<leader>fm', vim.lsp.buf.format, opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -67,15 +68,11 @@ lspconfig["cmake"].setup({
   on_attach = on_attach,
 })
 
-local mappings = {
-  n = {
-    -- find
-    ["<leader>fm"] = {
-      function()
-        vim.lsp.buf.format()
-      end,
-      "Format"
-    },
+vim.lsp.config('ty', {
+  settings = {
+    ty = {
+    }
   }
-}
-require("utils").set_mappings(mappings)
+})
+
+vim.lsp.enable('ty')

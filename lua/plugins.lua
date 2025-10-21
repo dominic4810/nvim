@@ -71,6 +71,14 @@ local plugins = {
       }
     end,
   },
+  {
+    "nvimtools/none-ls.nvim",
+    dependencies = { "williamboman/mason.nvim" },
+    lazy = false,
+    config = function()
+      require("configs.null_ls")
+    end,
+  },
 
   -- Autocomplete
   {
@@ -224,25 +232,25 @@ local plugins = {
     end,
   },
   -- Github Copilot
-  {
-    "github/copilot.vim",
-    lazy = false,
-    config = function ()
-      require "configs.copilot"
-    end
-  },
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    dependencies = {
-      { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
-      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-    },
-    build = "make tiktoken", -- Only on MacOS or Linux
-    lazy = false,
-    opts = function()
-      require "configs.copilotchat"
-    end,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  --   config = function ()
+  --     require "configs.copilot"
+  --   end
+  -- },
+  -- {
+  --   "CopilotC-Nvim/CopilotChat.nvim",
+  --   dependencies = {
+  --     { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+  --     { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+  --   },
+  --   build = "make tiktoken", -- Only on MacOS or Linux
+  --   lazy = false,
+  --   opts = function()
+  --     require "configs.copilotchat"
+  --   end,
+  -- },
   -- vim surround
   {
     "kylechui/nvim-surround",
@@ -347,11 +355,16 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter-context",
     lazy = false,
   },
-  -- Dressing for pretty UI
+  -- Snakcs for pretty UI (replaced dressing)
   {
-    "stevearc/dressing.nvim",
-    opts = {},
+    "folke/snacks.nvim",
     lazy = false,
+    opts = {
+      picker = {
+        enabled = true,
+        ui_select = true,
+      },
+    },
   },
   -- Colorizer
   {

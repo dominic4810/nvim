@@ -8,7 +8,7 @@ local mappings = {}
 -----------------
 
 mappings.n = {
-  ["mm"] = { "<Esc>", "Escape" },
+  ["qq"] = { "<Esc>", "Escape" },
   ["<Esc>"] = { ":noh <CR>", "Clear highlights" },
   -- switch between windows
   ["<C-h>"] = { "<C-w>h", "Window left" },
@@ -63,7 +63,7 @@ mappings.n = {
 -----------------
 
 mappings.v = {
-  ["mm"] = { "<Esc>", "Escape" },
+  ["qq"] = { "<Esc>", "Escape" },
   -- indent line
   ["<"] = { "<gv", "Indent line" },
   [">"] = { ">gv", "Indent line" },
@@ -91,7 +91,7 @@ mappings.v = {
 }
 
 mappings.i = {
-  ["mm"] = { "<Esc>", "Escape" },
+  ["qq"] = { "<Esc>", "Escape" },
 }
 
 require("utils").set_mappings(mappings)

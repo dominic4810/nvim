@@ -1,11 +1,13 @@
 local mappings = {}
 
 mappings.n = {
-  ["<leader>tt"] = {"<Cmd>TroubleToggle<CR>", "Toggle trouble"},
-  ["<leader>tw"] = {"<Cmd>TroubleToggle workspace_diagnostics<CR>", "Toggle trouble workspace diagnostics"},
-  ["<leader>tf"] = {"<Cmd>TroubleToggle document_diagnostics<CR>", "Toggle trouble document diagnostics"},
-  ["<leader>tr"] = {"<Cmd>TroubleToggle lsp_references<CR>", "List references"},
-  ["<leader>td"] = {"<Cmd>TroubleToggle lsp_definitions<CR>", "List definitons"},
+  ["<leader>tt"] = {"<Cmd>Trouble diagnostics toggle<CR>", "Toggle trouble"},
+  ["<leader>tb"] = {"<Cmd>Trouble diagnostics toggle filter.buf=0<CR>", "List buffer diagnostics"},
+  ["<leader>tw"] = {"<Cmd>Trouble diagnostics toggle filter.workspace=0<CR>", "List workspace diagnostics"},
+  ["<leader>tr"] =  {
+    "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+    "LSP Definitions / references / ... (Trouble)",
+  },
 }
 
 require("utils").set_mappings(mappings)
