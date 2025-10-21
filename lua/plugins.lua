@@ -162,7 +162,6 @@ local plugins = {
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       "nvim-lua/plenary.nvim"
     },
-    build = "TSUpdate",
     lazy = false,
     opts = function()
       return require "configs.telescope"
