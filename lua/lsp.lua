@@ -67,3 +67,6 @@ vim.lsp.config('ty', {
   }
 })
 vim.lsp.enable('ty')
+
+vim.lsp.config("rust_analyzer", {})
+vim.lsp.enable{"rust_analyzer"}

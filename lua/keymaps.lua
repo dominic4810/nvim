@@ -17,7 +17,7 @@ mappings.n = {
   ["<C-k>"] = { "<C-w>k", "Window up" },
   -- resize with arrows
   ["<C-Up>"] = { ":resize -2<CR>", "Resize window up" },
-  ["<C-Down>"] = { ":resize =2<CR>", "Resize window down" },
+  ["<C-Down>"] = { ":resize +2<CR>", "Resize window down" },
   ["<C-Left>"] = { ":vertical resize -2<CR>", "Resize window left" },
   ["<C-Right>"] = { ":vertical resize +2<CR>", "Resize window right" },
   -- line numbers

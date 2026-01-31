@@ -248,12 +248,18 @@ local plugins = {
   },
   -- terminal with floatterm
   {
-    "voldikss/vim-floaterm",
-    lazy = false,
-    config = function()
-      require "configs.floaterm"
-    end,
+    "nvzone/floaterm",
+    dependencies = "nvzone/volt",
+    opts = {},
+    cmd = "FloatermToggle",
   },
+  -- {
+  --   "voldikss/vim-floaterm",
+  --   lazy = false,
+  --   config = function()
+  --     require "configs.floaterm"
+  --   end,
+  -- },
   -- winbar
   {
     "utilyre/barbecue.nvim",
