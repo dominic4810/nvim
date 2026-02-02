@@ -250,7 +250,11 @@ local plugins = {
   {
     "nvzone/floaterm",
     dependencies = "nvzone/volt",
+    lazy = false,
     opts = {},
+    config = function()
+      require "configs.floaterm"
+    end,
     cmd = "FloatermToggle",
   },
   -- {

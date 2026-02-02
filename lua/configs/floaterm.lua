@@ -1,7 +1,7 @@
 local mappings = {}
 
 mappings.n = {
-  ["<leader>tn"] = {"<Cmd>FloatermNew<CR>", "Create new terminal"},
+  -- ["<leader>tn"] = {"<Cmd>FloatermNew<CR>", "Create new terminal"},
   ["<leader>tm"] = {"<Cmd>FloatermToggle<CR>", "Toggle terminal"}
 }
 
