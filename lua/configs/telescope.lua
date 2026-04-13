@@ -55,8 +55,8 @@ local options = {
       '--glob', '!.git/' -- exclude .git directory
     },
     prompt_prefix = "   ",
-    selection_caret = "  ",
-    entry_prefix = "  ",
+    selection_caret = "> ",
+    entry_prefix = "",
     initial_mode = "insert",
     selection_strategy = "reset",
     sorting_strategy = "ascending",
