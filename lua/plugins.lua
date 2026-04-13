@@ -275,7 +275,9 @@ local plugins = {
       "nvim-tree/nvim-web-devicons", -- optional dependency
     },
     opts = {
-      -- configurations go here
+      theme = {
+        normal = { bg = "fg", fg = "bg" }
+      }
     },
   },
   -- scroll bar
