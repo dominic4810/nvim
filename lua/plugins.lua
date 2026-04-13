@@ -133,18 +133,10 @@ local plugins = {
       require("ibl").setup(config)
     end,
   },
-  -- treesitter (for better highlighting)
-  -- {
-  --   "nvim-treesitter/nvim-treesitter",
-  --   cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-  --   lazy = false,
-  --   opts = function()
-  --     return require "configs.treesitter"
-  --   end,
-  --   config = function(_, opts)
-  --     require("nvim-treesitter.configs").setup(opts)
-  --   end,
-  -- },
+  {
+    "tmhedberg/SimpylFold",
+    ft = "python"
+  },
   -- file managing , picker etc
   {
     "nvim-tree/nvim-tree.lua",
@@ -162,7 +154,6 @@ local plugins = {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
-      -- "nvim-treesitter/nvim-treesitter",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       "nvim-lua/plenary.nvim"
     },
@@ -298,11 +289,6 @@ local plugins = {
       require("scrollbar.handlers.search").setup({})
       require("scrollbar.handlers.gitsigns").setup()
     end,
-  },
-  -- sticky scroll
-  {
-    "nvim-treesitter/nvim-treesitter-context",
-    lazy = false,
   },
   -- Snakcs for pretty UI (replaced dressing)
   {
