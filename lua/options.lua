@@ -39,7 +39,7 @@ opt.smartcase = true            -- but make it case sensitive if an uppercase is
 opt.fillchars = { eob = " " }   -- automatically add line
 
 -- Fold
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
-opt.foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) ]]
-opt.fillchars = "fold: "
+opt.foldmethod = "indent"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- opt.foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) ]]
+-- opt.fillchars = "fold: "
