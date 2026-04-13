@@ -36,6 +36,10 @@ local plugins = {
     "Mofiqul/dracula.nvim",
     lazy=false
   },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy=false
+  },
   -- LSP stuff
   {
     "neovim/nvim-lspconfig",
@@ -130,17 +134,17 @@ local plugins = {
     end,
   },
   -- treesitter (for better highlighting)
-  {
-    "nvim-treesitter/nvim-treesitter",
-    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-    lazy = false,
-    opts = function()
-      return require "configs.treesitter"
-    end,
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
-    end,
-  },
+  -- {
+  --   "nvim-treesitter/nvim-treesitter",
+  --   cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+  --   lazy = false,
+  --   opts = function()
+  --     return require "configs.treesitter"
+  --   end,
+  --   config = function(_, opts)
+  --     require("nvim-treesitter.configs").setup(opts)
+  --   end,
+  -- },
   -- file managing , picker etc
   {
     "nvim-tree/nvim-tree.lua",
