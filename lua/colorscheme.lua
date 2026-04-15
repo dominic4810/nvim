@@ -7,3 +7,4 @@ if not is_ok then
 end
 vim.cmd('hi BufferVisible guibg=bg')
 vim.cmd('hi BufferCurrent guibg=fg guifg=bg')
+vim.cmd('hi BufferCurrentMod guibg=fg guifg=darkred')
