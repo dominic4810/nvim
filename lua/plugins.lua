@@ -309,6 +309,12 @@ local plugins = {
     lazy = false,
     opts = {},
   },
+  -- semantic highlight
+  {
+    "jaxbot/semantic-highlight.vim",
+    lazy = false,
+  },
+
 }
 
 local opts = {
