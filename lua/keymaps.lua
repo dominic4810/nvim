@@ -33,25 +33,8 @@ mappings.n = {
   ["<leader>wn"] = {"<cmd>:set nowrap<cr>", "Disable wrap"},
   -- hop
   ["<leader><leader>w"] = {
-    function()
-      require('hop').hint_words({require('hop.hint').HintDirection.AFTER_CUROSR, current_line_only = false})
-    end,
+    "<Plug>(leap)",
     "Hop by word, forwards"},
-  ["<leader><leader>l"] = {
-    function()
-      require('hop').hint_lines({require('hop.hint').HintDirection.AFTER_CUROSR, current_line_only = false})
-    end,
-    "Hop by line, forwards"},
-  ["<leader><leader>c"] = {
-    function()
-      require('hop').hint_char1({require('hop.hint').HintDirection.AFTER_CUROSR, current_line_only = false})
-    end,
-    "Hop by char forwards"},
-  ["<leader><leader>p"] = {
-    function()
-      require('hop').hint_patterns({require('hop.hint').HintDirection.AFTER_CUROSR, current_line_only = false})
-    end,
-    "Hop by pattern, forwards"},
   -- exit with C-d
   ["<C-d>"] = {":q<CR>", "Exit"},
 }

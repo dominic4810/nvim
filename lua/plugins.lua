@@ -196,13 +196,10 @@ local plugins = {
       require("nvim-surround").setup()
     end,
   },
-  -- hop
+  -- leap
   {
-    "phaazon/hop.nvim",
-    lazy = true,
-    config = function()
-      require("hop").setup()
-    end,
+    "https://codeberg.org/andyg/leap.nvim",
+    lazy = false,
   },
   -- statusline
   {
