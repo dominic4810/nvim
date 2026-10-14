@@ -1,4 +1,4 @@
-local colorscheme = "onedark-vivd"
+local colorscheme = "onedark_vivid"
 
 local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not is_ok then
