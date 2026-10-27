@@ -2,15 +2,15 @@ local options = {
   marks = {
     GitAdd = {
       text = '',
-      color = 'green',
+      highlight = { fg = 'green' },
     },
     GitChange = {
       text = '',
-      color = 'yellow',
+      highlight = { fg = 'yellow' },
     },
     GitDelete = {
       text = '',
-      color = 'red',
+      highlight = { fg = 'red' },
     },
   }
 }

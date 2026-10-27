@@ -42,4 +42,4 @@ opt.fillchars = { eob = " " }   -- automatically add line
 opt.foldmethod = "marker"
 opt.foldmarker = "{,}"
 opt.foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) ]]
-opt.fillchars = "fold: "
+opt.fillchars = { eob = " ", fold = " " }

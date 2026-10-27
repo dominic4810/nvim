@@ -133,6 +133,16 @@ local plugins = {
       require("ibl").setup(config)
     end,
   },
+  -- treesitter (main branch: parser install + queries only; highlight/fold via built-in vim.treesitter)
+  {
+    "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
+    build = ":TSUpdate",
+    config = function()
+      require "configs.treesitter"
+    end,
+  },
   {
     "tmhedberg/SimpylFold",
     ft = "python"
@@ -272,16 +282,16 @@ local plugins = {
   -- scroll bar
   {
     "petertriho/nvim-scrollbar",
+    -- v2 replaces v1 on main on 2026-11-16; switch to the default branch after that
+    branch = "refactor/v2",
     lazy = false,
     dependencies = {
-      "kevinhwang91/nvim-hlslens",
+      "lewis6991/gitsigns.nvim",
     },
     config = function()
-      require("scrollbar").setup(
-        require "configs.scrollbar"
-      )
-      require("scrollbar.handlers.search").setup({})
-      require("scrollbar.handlers.gitsigns").setup()
+      local options = require "configs.scrollbar"
+      options.providers = { gitsigns = true } -- search is native in v2, no hlslens needed
+      require("scrollbar").setup(options)
     end,
   },
   -- Snakcs for pretty UI (replaced dressing)
